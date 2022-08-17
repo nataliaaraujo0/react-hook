@@ -1,6 +1,7 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
+import { ButtonIncrement } from "./components/ButtonIncrement";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,11 +17,7 @@ function App() {
         </a>
       </div>
       <h1>useCallback</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
+      <ButtonIncrement />
       <p className="read-the-docs">{count}</p>
     </div>
   );

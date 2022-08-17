@@ -1,0 +1,7 @@
+.card {
+  padding: 2em;
+}
+.card > button {
+  background: #0d8553;
+  color: aliceblue;
+}
