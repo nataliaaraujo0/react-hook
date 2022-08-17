@@ -1,11 +1,14 @@
-import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { ButtonIncrement } from "./components/ButtonIncrement";
+import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [counter, setCount] = useState(0);
 
+  const handleIncrementCounter = (num: number) => {
+    setCount(counter + num);
+  };
   return (
     <div className="App">
       <div>
@@ -17,8 +20,8 @@ function App() {
         </a>
       </div>
       <h1>useCallback</h1>
-      <ButtonIncrement />
-      <p className="read-the-docs">{count}</p>
+      <ButtonIncrement incrementButton={handleIncrementCounter} />
+      <p className="read-the-docs">{counter}</p>
     </div>
   );
 }
